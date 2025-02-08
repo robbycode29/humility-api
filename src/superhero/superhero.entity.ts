@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-import { IsNumber, IsString, Min, Max } from 'class-validator';
+import { IsInt, IsString, Min, Max } from 'class-validator';
 
 @Entity()
 export class Superhero {
@@ -14,9 +14,9 @@ export class Superhero {
     @IsString()
     superpower: string;
 
-    @Column('float')
-    @IsNumber()
-    @Min(0)
-    @Max(1)
+    @Column('int')
+    @IsInt()
+    @Min(1)
+    @Max(10)
     humilityScore: number;
 }

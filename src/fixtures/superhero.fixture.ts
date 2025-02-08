@@ -7,9 +7,9 @@ async function runFixture() {
     const superheroService = app.get(SuperheroService);
 
     const superheroes = [
-        { name: 'Superman', superpower: 'Flight', humilityScore: 0.8 },
-        { name: 'Batman', superpower: 'Intelligence', humilityScore: 0.7 },
-        { name: 'Wonder Woman', superpower: 'Strength', humilityScore: 0.9 },
+        { name: 'Superman', superpower: 'Flight', humilityScore: 8 },
+        { name: 'Batman', superpower: 'Intelligence', humilityScore: 7 },
+        { name: 'Wonder Woman', superpower: 'Strength', humilityScore: 9 },
     ];
 
     for (const hero of superheroes) {
