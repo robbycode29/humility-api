@@ -1,13 +1,12 @@
 {
   "type": "postgres",
-  "host": "localhost",
-  "port": 5432,
-  "username": "postgres",
-  "password": "postgres",
-  "database": "nest",
+  "url": "${DATABASE_URL}",
   "entities": ["dist/**/*.entity.js"],
   "migrations": ["dist/migrations/*.js"],
   "cli": {
     "migrationsDir": "src/migrations"
+  },
+  "ssl": {
+    "rejectUnauthorized": false
   }
 }
