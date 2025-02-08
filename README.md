@@ -17,6 +17,7 @@
 4. Expand Test Coverage: Write additional unit and integration tests to cover more scenarios and ensure the robustness of the application.
 5. Explore New Features: Investigate and implement new features that could enhance the functionality of the application, such as user authentication and authorization, or additional superhero attributes.
 6. Improve Documentation: Enhance the documentation to provide more detailed information about the application, its architecture, and how to use and contribute to the codebase.
+7. Implement authentication and authorization: Add user authentication and authorization to restrict access to certain endpoints and ensure data privacy and security.
 
 ## Project Setup
 
