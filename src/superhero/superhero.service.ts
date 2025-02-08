@@ -18,4 +18,19 @@ export class SuperheroService {
     async getSuperheroes(): Promise<Superhero[]> {
         return this.superheroRepository.find({ order: { humilityScore: 'DESC' } });
     }
+
+    async deleteSuperhero(id: number): Promise<void> {
+        await this.superheroRepository.delete(id);
+    }
+
+    async updateSuperhero(id: number, name: string, superpower: string, humilityScore: number): Promise<Superhero> {
+        const superhero = await this.superheroRepository.findOneBy({ id });
+        if (!superhero) {
+            throw new Error('Superhero not found');
+        }
+        superhero.name = name;
+        superhero.superpower = superpower;
+        superhero.humilityScore = humilityScore;
+        return this.superheroRepository.save(superhero);
+    }
 }

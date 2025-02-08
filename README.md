@@ -29,10 +29,15 @@
 
 ### Running Migrations
 
-
-1. **Run the migrations**:
+1. **Generate a migration**:
    ```bash
-   docker-compose exec app npx ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run -d ./data-source.ts
+   docker-compose exec app npm run generate:migration
+   ```
+   This command will generate a migration file in the `src/migrations` directory.
+
+2. **Run the migrations**:
+   ```bash
+   docker-compose exec app npm run run:migration
    ```
 
    This command will apply the generated migration to the PostgreSQL database.
@@ -55,6 +60,13 @@
    ```
 
    These commands will help you verify that the `superhero` table has been created with the correct columns and data types.
+
+4. **Applying fixtures**:
+   ```bash
+   docker-compose exec app npm run run:fixtures
+   ```
+
+   This command will seed the `superhero` table with sample data.
 
 ### Stopping the Application
 
