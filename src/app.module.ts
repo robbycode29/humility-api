@@ -10,6 +10,9 @@ import { Superhero } from './superhero/superhero.entity';
       url: process.env.DATABASE_URL,
       entities: [Superhero],
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
     SuperheroModule,
   ],
